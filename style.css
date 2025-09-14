@@ -1,0 +1,405 @@
+/* DexRobot Theme Colors - Matching the poster */
+:root {
+    --dexrobot-color: #26b7c1;  /* RGB(38,183,193) */
+    --dexrobot-title: #0c383b;  /* RGB(12,56,59) */
+    --nott-blue: #10263b;       /* RGB(16,38,59) */
+    --light-gray: #f0f0f0;
+    --text-dark: #333;
+    --text-light: #666;
+    --white: #ffffff;
+    --shadow: rgba(0,0,0,0.1);
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background: var(--white);
+    box-shadow: 0 2px 4px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dexrobot-title);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--dexrobot-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--dexrobot-color) 0%, #1a8b93 100%);
+    color: var(--white);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.hero-meta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.badge {
+    background: rgba(255,255,255,0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.hero-sponsor {
+    margin-top: 2rem;
+}
+
+.sponsor-link {
+    color: var(--white);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid var(--white);
+    transition: opacity 0.3s;
+}
+
+.sponsor-link:hover {
+    opacity: 0.8;
+}
+
+/* Sections */
+.section {
+    padding: 4rem 0;
+}
+
+.section-dark {
+    background: var(--light-gray);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--dexrobot-title);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Abstract Section */
+.abstract-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.abstract-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.key-contributions {
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.key-contributions h3 {
+    color: var(--dexrobot-title);
+    margin-bottom: 1rem;
+}
+
+.key-contributions ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.key-contributions li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.key-contributions li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--dexrobot-color);
+    font-weight: bold;
+}
+
+/* Video Section */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.video-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-card h3 {
+    padding: 1rem;
+    color: var(--dexrobot-title);
+}
+
+.video-card p {
+    padding: 0 1rem 1rem;
+    color: var(--text-light);
+}
+
+.local-video-note {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.local-video-note pre {
+    background: var(--light-gray);
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-top: 0.5rem;
+}
+
+/* Results Section */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.result-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--light-gray);
+    border-radius: 10px;
+}
+
+.result-card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.result-card h3 {
+    color: var(--dexrobot-title);
+    margin-bottom: 0.5rem;
+}
+
+.metrics {
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.metrics h3 {
+    color: var(--dexrobot-title);
+    margin-bottom: 1rem;
+}
+
+.metrics ul {
+    list-style-position: inside;
+    margin-top: 1rem;
+}
+
+/* Downloads Section */
+.download-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.download-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+.download-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow);
+}
+
+.download-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.download-card h3 {
+    color: var(--dexrobot-title);
+    margin-bottom: 0.5rem;
+}
+
+.download-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Citation */
+.citation {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.citation h3 {
+    color: var(--dexrobot-title);
+    margin-bottom: 1rem;
+}
+
+.citation pre {
+    background: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact-info {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-email {
+    font-size: 1.25rem;
+    color: var(--dexrobot-color);
+    margin: 2rem 0;
+}
+
+.sponsor-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--light-gray);
+}
+
+.sponsor-logo img {
+    max-height: 60px;
+    margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+    background: var(--dexrobot-title);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-meta {
+        flex-wrap: wrap;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .download-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,36 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Optional: Large video files (if storing locally)
+# assets/videos/*.mp4
+# assets/videos/*.mov
+
+# Temporary files
+*.tmp
+*.bak
+.cache/
+
+# Environment variables
+.env
+.env.local

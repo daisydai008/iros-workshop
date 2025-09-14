@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IROS 2025 Workshop - Generalized Retargeting for Dexterous Manipulation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">IROS 2025 Workshop</div>
+            <ul class="nav-menu">
+                <li><a href="#abstract">Abstract</a></li>
+                <li><a href="#videos">Demo Videos</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#downloads">Downloads</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Generalized Retargeting for Dexterous Manipulation</h1>
+            <p class="hero-subtitle">A Virtual Controller Framework Across Dataset and Teleoperation</p>
+            <div class="hero-meta">
+                <span class="badge">IROS 2025</span>
+                <span class="badge">Abu Dhabi</span>
+                <span class="badge">October 2025</span>
+            </div>
+            <div class="hero-sponsor">
+                <p>Sponsored by <a href="https://www.dexrobot.com" target="_blank" class="sponsor-link">DexRobot</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Abstract Section -->
+    <section id="abstract" class="section">
+        <div class="container">
+            <h2 class="section-title">Abstract</h2>
+            <div class="abstract-content">
+                <p>We present a generic policy framework for anthropomorphic dexterous hand manipulation that bridges the gap between human demonstrations and robotic execution. Our framework learns robust, goal-directed manipulation behaviors that generalize across diverse tasks, while preserving human-like grasp and motion structure from limited demonstrations.</p>
+
+                <div class="key-contributions">
+                    <h3>Key Contributions</h3>
+                    <ul>
+                        <li><strong>Unified Retargeting Framework:</strong> Single framework applicable to both teleoperation and dataset-driven learning</li>
+                        <li><strong>Virtual Operator Pipeline:</strong> Introduces a learnable policy that simulates human teleoperation</li>
+                        <li><strong>Contact-Aware Retargeting:</strong> Addresses high-dimensional policy spaces with hardware constraints</li>
+                        <li><strong>Real Hardware Deployment:</strong> Successfully deployed on DexHand021 with JAKA Mini robot arm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Videos Section -->
+    <section id="videos" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Demonstration Videos</h2>
+            <div class="video-grid">
+                <!-- Video 1 - Replace YOUR_VIDEO_ID with actual YouTube video ID -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1"
+                            title="Power Grasp Demo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3>Power Grasp Regime</h3>
+                    <p>Whole-hand force closure demonstration</p>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
+                            title="Enveloping Grasp Demo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3>Enveloping Grasp</h3>
+                    <p>Full-wrap stabilization technique</p>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3"
+                            title="Tool-Handle Grasp Demo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3>Tool-Handle Grasp</h3>
+                    <p>Axis-aligned manipulation for tools</p>
+                </div>
+
+                <!-- Add more videos as needed -->
+            </div>
+
+            <!-- Alternative: Local Video Files -->
+            <div class="local-video-note">
+                <p>Note: Replace YouTube embed codes above with your actual video IDs, or use local video files:</p>
+                <pre><code>&lt;video controls width="100%"&gt;
+    &lt;source src="videos/demo1.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="section">
+        <div class="container">
+            <h2 class="section-title">Experimental Results</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <img src="assets/images/box.pdf" alt="Box Manipulation Results" onerror="this.src='assets/images/placeholder.png'">
+                    <h3>Box Manipulation</h3>
+                    <p>ADD-AUC Score: 0.85</p>
+                </div>
+                <div class="result-card">
+                    <img src="assets/images/mixer.pdf" alt="Mixer Manipulation Results" onerror="this.src='assets/images/placeholder.png'">
+                    <h3>Mixer Operation</h3>
+                    <p>ADD-AUC Score: 0.82</p>
+                </div>
+            </div>
+
+            <div class="metrics">
+                <h3>Performance Metrics</h3>
+                <p>We evaluated our model using the Area Under the Curve of Average Distance (ADD-AUC) metric across multiple YCB objects.</p>
+                <ul>
+                    <li>Average success rate: 78.5%</li>
+                    <li>Real-time performance: 30 Hz control loop</li>
+                    <li>Training datasets: HO3D, Arctic, DexYCB, DexCanvas</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloads Section -->
+    <section id="downloads" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Downloads & Resources</h2>
+            <div class="download-grid">
+                <a href="assets/downloads/poster.pdf" class="download-card" download>
+                    <div class="download-icon">📄</div>
+                    <h3>Workshop Poster</h3>
+                    <p>High-resolution PDF (3.4 MB)</p>
+                </a>
+
+                <a href="#" class="download-card">
+                    <div class="download-icon">💾</div>
+                    <h3>Supplementary Materials</h3>
+                    <p>Coming Soon</p>
+                </a>
+
+                <a href="https://github.com/daisydai008/iros-workshop" class="download-card" target="_blank">
+                    <div class="download-icon">🔗</div>
+                    <h3>GitHub Repository</h3>
+                    <p>Source code and data</p>
+                </a>
+            </div>
+
+            <!-- BibTeX Citation -->
+            <div class="citation">
+                <h3>Citation</h3>
+                <pre><code>@inproceedings{iros2025workshop,
+    title={Generalized Retargeting for Dexterous Manipulation},
+    author={Anonymous Submission},
+    booktitle={IROS 2025 Workshop on Dexterous Manipulation},
+    year={2025},
+    location={Abu Dhabi, UAE}
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-info">
+                <p>For questions about this work, please contact:</p>
+                <p class="contact-email">📧 your.email@example.com</p>
+                <div class="sponsor-footer">
+                    <p>This research is sponsored by</p>
+                    <a href="https://www.dexrobot.com" target="_blank" class="sponsor-logo">
+                        <img src="assets/images/logos/DEXROBOT LOGO_0314 copy-08.png" alt="DexRobot" height="60">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 IROS Workshop. All rights reserved.</p>
+            <p>Website created for IROS 2025 Workshop on Dexterous Manipulation</p>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for smooth scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
