@@ -2,7 +2,7 @@
 
 Interactive website for "Generalized Retargeting for Dexterous Manipulation" workshop presentation.
 
-🌐 **Live at:** https://daisydai008.github.io/iros-workshop-website/
+🌐 **Live at:** https://daisydai008.github.io/iros-workshop/
 
 ## 📁 Repository Structure
 
@@ -26,7 +26,7 @@ iros-workshop-website/
 
 1. Push this repository to GitHub:
    ```bash
-   git remote add origin https://github.com/daisydai008/iros-workshop-website.git
+   git remote add origin https://github.com/daisydai008/iros-workshop.git
    git branch -M main
    git push -u origin main
    ```
@@ -38,7 +38,7 @@ iros-workshop-website/
    - Folder: / (root)
    - Save
 
-3. Your site will be live at: https://daisydai008.github.io/iros-workshop-website/
+3. Your site will be live at: https://daisydai008.github.io/iros-workshop/
 
 ### 2. Add Your Videos
 
