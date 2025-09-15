@@ -1,126 +1,33 @@
-# IROS 2025 Workshop - Website
+# IROS 2025 Workshop - Generalized Retargeting for Dexterous Manipulation
 
-Interactive website for "Generalized Retargeting for Dexterous Manipulation" workshop presentation.
+Interactive website for the "Generalized Retargeting for Dexterous Manipulation" workshop presentation at IROS 2025.
 
 🌐 **Live at:** https://daisydai008.github.io/iros-workshop/
 
-## 📁 Repository Structure
+## 📝 About
 
-```
-iros-workshop-website/
-├── index.html              # Main website page
-├── style.css               # Website styling
-├── assets/
-│   ├── downloads/
-│   │   └── poster.pdf      # Workshop poster for download
-│   ├── images/             # Images and figures
-│   │   ├── logos/          # DexRobot logos
-│   │   └── *.jpg/png       # Figures from poster
-│   └── videos/             # Demo videos (optional)
-└── README.md               # This file
-```
+This workshop explores advanced techniques for retargeting human demonstrations to robotic systems, enabling more intuitive and efficient programming of dexterous manipulation tasks. Our research focuses on generalizable methods that can adapt across different robot morphologies and task domains.
 
-## 🚀 Quick Start
+## 🎯 Key Topics
 
-### 1. Deploy to GitHub Pages
+- **Retargeting Methods**: Novel approaches for mapping human motions to robot actions
+- **Dexterous Manipulation**: Complex object handling with multi-fingered robot hands
+- **Generalization**: Techniques that work across different robot platforms
+- **Real-world Applications**: Practical implementations in industrial and service robotics
 
-1. Push this repository to GitHub:
-   ```bash
-   git remote add origin https://github.com/daisydai008/iros-workshop.git
-   git branch -M main
-   git push -u origin main
-   ```
+## 📊 Workshop Materials
 
-2. Enable GitHub Pages:
-   - Go to Settings → Pages
-   - Source: Deploy from branch
-   - Branch: main
-   - Folder: / (root)
-   - Save
-
-3. Your site will be live at: https://daisydai008.github.io/iros-workshop/
-
-### 2. Add Your Videos
-
-Replace the placeholder video IDs in `index.html`:
-
-```html
-<!-- Find and replace these -->
-YOUR_VIDEO_ID_1
-YOUR_VIDEO_ID_2
-YOUR_VIDEO_ID_3
-```
-
-With your actual YouTube video IDs:
-```html
-<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
-```
-
-### 3. Update Contact Information
-
-Edit line ~198 in `index.html`:
-```html
-<p class="contact-email">📧 your.email@example.com</p>
-```
-
-## 📝 Content Updates
-
-### Adding New Sections
-
-Add a new section to `index.html`:
-```html
-<section id="new-section" class="section">
-    <div class="container">
-        <h2 class="section-title">Your Title</h2>
-        <!-- Your content -->
-    </div>
-</section>
-```
-
-### Updating Poster PDF
-
-When the poster is updated:
-1. Get the new PDF from the poster repository
-2. Copy to `assets/downloads/poster.pdf`
-3. Commit and push
-
-## 🎨 Customization
-
-### Colors
-Edit the CSS variables in `style.css`:
-```css
-:root {
-    --dexrobot-color: #26b7c1;  /* Teal accent */
-    --dexrobot-title: #0c383b;  /* Dark teal */
-}
-```
-
-### Fonts
-Currently using Inter font. To change, edit in `index.html`:
-```html
-<link href="https://fonts.googleapis.com/css2?family=YourFont" rel="stylesheet">
-```
-
-## 🔗 Related Repository
-
-**Poster Source (LaTeX):** [iros-workshop](https://github.com/daisydai008/iros-workshop)
-- Contains LaTeX source files
-- Syncs with Overleaf
-- Generates poster.pdf
-
-## 📊 Workflow
-
-```
-1. Edit poster in Overleaf/LaTeX repo
-2. Compile poster.pdf
-3. Copy PDF to this website repo
-4. Push changes
-5. GitHub Pages auto-deploys
-```
+- **Poster**: Available for download in the website
+- **Demo Videos**: Interactive demonstrations showcasing our retargeting methods
+- **Research Papers**: Links to related publications and extended abstracts
 
 ## 🤝 Sponsorship
 
-This research is sponsored by [DexRobot](https://www.dexrobot.com).
+This research is sponsored by [DexRobot](https://www.dexrobot.com), a leading company in dexterous robotic manipulation solutions.
+
+## 📧 Contact
+
+For questions or collaboration opportunities, please visit the contact section on our website.
 
 ## 📄 License
 
