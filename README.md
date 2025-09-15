@@ -23,7 +23,7 @@ This workshop explores advanced techniques for retargeting human demonstrations 
 
 ## 🤝 Sponsorship
 
-This research is sponsored by [DexRobot](https://www.dexrobot.com), a leading company in dexterous robotic manipulation solutions.
+This research is sponsored by [DexRobot](https://www.dex-robot.com/), a leading company in dexterous robotic manipulation solutions.
 
 ## 📧 Contact
 
