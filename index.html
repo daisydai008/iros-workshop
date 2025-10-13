@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IROS 2025 Workshop - Generalized Retargeting for Dexterous Manipulation</title>
+    <title>IROS 2025 Workshop - HOVER: Generalized Retargeting for Dexterous Manipulation</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -25,8 +25,8 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1 class="hero-title">Generalized Retargeting for Dexterous Manipulation</h1>
-            <p class="hero-subtitle">A Virtual Controller Framework Across Dataset and Teleoperation</p>
+            <h1 class="hero-title">HOVER: Generalized Retargeting for Dexterous Manipulation</h1>
+            <p class="hero-subtitle">Human-Operator Virtual-Enhanced Retargeting for Unified Policy Learning</p>
             <div class="hero-meta">
                 <span class="badge">IROS 2025</span>
                 <span class="badge">Hangzhou</span>
@@ -43,15 +43,16 @@
         <div class="container">
             <h2 class="section-title">Abstract</h2>
             <div class="abstract-content">
-                <p>We present a generic policy framework for anthropomorphic dexterous hand manipulation that bridges the gap between human demonstrations and robotic execution. Our framework learns robust, goal-directed manipulation behaviors that generalize across diverse tasks, while preserving human-like grasp and motion structure from limited demonstrations.</p>
+                <p><strong>Retargeting</strong>—mapping human hand trajectories to robot joint commands—is fundamental to dexterous manipulation, bridging the <strong>embodiment gap</strong> for both offline learning and online teleoperation. Recent work leaves gaps: <strong>kinematics-based</strong> methods prioritize mimicry over task completion, while <strong>object-centric</strong> methods train separate models per demonstration, limiting generalization.</p>
+
+                <p>HOVER builds on object-centric learning but introduces a <strong>virtual operator</strong> that simulates human teleoperation adaptively. This enables <strong>goal-directed</strong> behaviors that <strong>generalize across tasks</strong> while preserving human-like motion, with direct hardware deployment capability.</p>
 
                 <div class="key-contributions">
                     <h3>Key Contributions</h3>
                     <ul>
-                        <li><strong>Unified Retargeting Framework:</strong> Single framework applicable to both teleoperation and dataset-driven learning</li>
-                        <li><strong>Virtual Operator Pipeline:</strong> Introduces a learnable policy that simulates human teleoperation</li>
-                        <li><strong>Contact-Aware Retargeting:</strong> Addresses high-dimensional policy spaces with hardware constraints</li>
-                        <li><strong>Real Hardware Deployment:</strong> Successfully deployed on DexHand021 with JAKA Mini robot arm</li>
+                        <li><strong>Generalizable Retargeting Policy:</strong> Single policy across diverse tasks achieving both high task fidelity and anthropomorphism—metrics that existing methods trade off.</li>
+                        <li><strong>Virtual Operator Methodology:</strong> Novel training paradigm simulating closed-loop human control for offline demonstrations, maintaining generalization through minimal interface design.</li>
+                        <li><strong>Comprehensive Evaluation:</strong> Improved success rates across diverse manipulation tasks in simulation and successful real hardware deployment with DexHand021.</li>
                     </ul>
                 </div>
             </div>
@@ -111,13 +112,6 @@
                 <!-- Add more videos as needed -->
             </div>
 
-            <!-- Alternative: Local Video Files -->
-            <div class="local-video-note">
-                <p>Note: Replace YouTube embed codes above with your actual video IDs, or use local video files:</p>
-                <pre><code>&lt;video controls width="100%"&gt;
-    &lt;source src="videos/demo1.mp4" type="video/mp4"&gt;
-&lt;/video&gt;</code></pre>
-            </div>
         </div>
     </section>
 
@@ -127,24 +121,24 @@
             <h2 class="section-title">Experimental Results</h2>
             <div class="results-grid">
                 <div class="result-card">
-                    <img src="assets/images/box.pdf" alt="Box Manipulation Results" onerror="this.src='assets/images/placeholder.png'">
+                    <img src="assets/images/box.png" alt="Box Manipulation Results">
                     <h3>Box Manipulation</h3>
-                    <p>ADD-AUC Score: 0.85</p>
+                    <p>Quantitative evaluation using ADD-AUC metric</p>
                 </div>
                 <div class="result-card">
-                    <img src="assets/images/mixer.pdf" alt="Mixer Manipulation Results" onerror="this.src='assets/images/placeholder.png'">
+                    <img src="assets/images/mixer.png" alt="Mixer Manipulation Results">
                     <h3>Mixer Operation</h3>
-                    <p>ADD-AUC Score: 0.82</p>
+                    <p>Quantitative evaluation using ADD-AUC metric</p>
                 </div>
             </div>
 
             <div class="metrics">
                 <h3>Performance Metrics</h3>
-                <p>We evaluated our model using the Area Under the Curve of Average Distance (ADD-AUC) metric across multiple YCB objects.</p>
+                <p>We evaluated our model using the Area Under the Curve of Average Distance (ADD-AUC) metric across multiple hand-object interative sequences.</p>
                 <ul>
-                    <li>Average success rate: 78.5%</li>
-                    <li>Real-time performance: 30 Hz control loop</li>
-                    <li>Training datasets: HO3D, Arctic, DexYCB, DexCanvas</li>
+                    <li><strong>Training datasets:</strong> HO-3D, ARCTIC, DexYCB, and <a href="#" class="dataset-link">DexCanvas</a> (self-collected human manipulation dataset, to be released)</li>
+                    <li><strong>Real-time performance:</strong> 30 Hz control loop</li>
+                    <li><strong>Hardware:</strong> Successfully deployed on DexHand021 with JAKA Mini robot arm</li>
                 </ul>
             </div>
         </div>
@@ -158,7 +152,7 @@
                 <a href="assets/downloads/poster.pdf" class="download-card" download>
                     <div class="download-icon">📄</div>
                     <h3>Workshop Poster</h3>
-                    <p>High-resolution PDF (3.4 MB)</p>
+                    <p>High-resolution PDF (~742 KB)</p>
                 </a>
 
                 <a href="#" class="download-card">
@@ -177,9 +171,10 @@
             <!-- BibTeX Citation -->
             <div class="citation">
                 <h3>Citation</h3>
-                <pre><code>@inproceedings{iros2025workshop,
-    title={Generalized Retargeting for Dexterous Manipulation},
-    author={Anonymous Submission},
+                <pre><code>@inproceedings{iros2025hover,
+    title={HOVER: Generalized Retargeting for Dexterous Manipulation},
+    author={Dai, Jing and Wang, Qianshu and Zhang, Shurui and
+            Zhao, Bin and Zhang, Jiahong and Yuan, Jianbo and Lu, Yiwen},
     booktitle={IROS 2025 Workshop on Dexterous Manipulation},
     year={2025},
     location={Hangzhou, China}
@@ -191,15 +186,19 @@
     <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <div class="contact-info">
-                <p>For questions about this work, please contact:</p>
-                <p class="contact-email">📧 your.email@example.com</p>
-                <div class="sponsor-footer">
-                    <p>This research is sponsored by</p>
+            <h2 class="section-title">Contact & Sponsor</h2>
+            <div class="contact-grid">
+                <div class="contact-column">
+                    <h3>Contact</h3>
+                    <p>For questions about this work, please contact:</p>
+                    <p class="contact-email">📧 <a href="mailto:lyw@dex-robot.com">lyw@dex-robot.com</a></p>
+                </div>
+                <div class="sponsor-column">
+                    <h3>Sponsored By</h3>
                     <a href="https://www.dex-robot.com/" target="_blank" class="sponsor-logo">
-                        <img src="assets/images/logos/DEXROBOT LOGO_0314 copy-08.png" alt="DexRobot" height="60">
+                        <img src="assets/images/logos/DEXROBOT LOGO_0314 copy-09.png" alt="DexRobot" height="60">
                     </a>
+                    <p><a href="https://www.dex-robot.com/" target="_blank">www.dex-robot.com</a></p>
                 </div>
             </div>
         </div>
